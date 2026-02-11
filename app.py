@@ -57,11 +57,12 @@ if st.button("Predict Wine Quality"):
     input_array = np.array(input_values).reshape(1, -1)
 
     # Scale input
-    scaled_input = scaler.transform(input_array)
+    scaled_input = Scaler.transform(input_array)
 
     # Predict
     prediction = model.predict(scaled_input)
 
 
     st.success(f"🍷 Predicted Wine Quality: **{int(prediction[0])}**")
+
 
